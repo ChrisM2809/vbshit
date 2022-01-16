@@ -5,7 +5,7 @@ Public Class Form3
     Dim myDataSet1 As New DataSet
     Dim command As New OleDbCommand
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load, DataGridView1.ReadOnlyChanged
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\IFB_DB.accdb"
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\phili\Desktop\vbshit-main\vbshit-main\Projektarbeit-2021\IFB_DB.accdb"
         con.Open()
         command.Connection = con
 
@@ -18,7 +18,6 @@ Public Class Form3
             Me.DataGridView1.DataSource = myDataSet1.Tables(0)
             Me.myDataSet1.Tables.Clear()
             command.CommandText = "UPDATE Arbeitsvorräte SET BereitsGefertigtMenge = BereitsGefertigtMenge + '" + txtFertig.Text + "' WHERE Auftragsnummer = " + txtNr.Text + ";"
-
             command.ExecuteNonQuery()
         Catch ex As Exception
 
