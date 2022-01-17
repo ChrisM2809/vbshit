@@ -14,7 +14,11 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+<<<<<<< HEAD
         con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\IFB_DB.accdb"
+=======
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\phili\Desktop\vbshit-main\vbshit-main\Projektarbeit-2021\IFB_DB.accdb"
+>>>>>>> 7b8b8092217f2fe2bb9c29901c60d38483373ada
         con.Open()
         command.Connection = con
     End Sub
