@@ -24,11 +24,14 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtFertig = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNr = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtKom = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,37 +40,28 @@ Partial Class Form3
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 97)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1448, 426)
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DataGridView1.Size = New System.Drawing.Size(1260, 426)
         Me.DataGridView1.TabIndex = 1
         '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.SteelBlue
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(1278, 12)
+        Me.Button2.Location = New System.Drawing.Point(854, 16)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 32)
+        Me.Button2.Size = New System.Drawing.Size(115, 32)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Schließen"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(477, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 32)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'txtFertig
         '
         Me.txtFertig.Location = New System.Drawing.Point(225, 18)
         Me.txtFertig.Multiline = True
         Me.txtFertig.Name = "txtFertig"
-        Me.txtFertig.Size = New System.Drawing.Size(246, 31)
+        Me.txtFertig.Size = New System.Drawing.Size(100, 31)
         Me.txtFertig.TabIndex = 16
         '
         'Label3
@@ -86,7 +80,7 @@ Partial Class Form3
         Me.txtNr.Location = New System.Drawing.Point(225, 55)
         Me.txtNr.Multiline = True
         Me.txtNr.Name = "txtNr"
-        Me.txtNr.Size = New System.Drawing.Size(246, 31)
+        Me.txtNr.Size = New System.Drawing.Size(100, 31)
         Me.txtNr.TabIndex = 18
         '
         'Label4
@@ -100,18 +94,59 @@ Partial Class Form3
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Auftragsnummer:"
         '
+        'txtKom
+        '
+        Me.txtKom.Location = New System.Drawing.Point(506, 19)
+        Me.txtKom.Multiline = True
+        Me.txtKom.Name = "txtKom"
+        Me.txtKom.Size = New System.Drawing.Size(115, 31)
+        Me.txtKom.TabIndex = 20
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(654, 24)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 31)
+        Me.TextBox2.TabIndex = 21
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button3.ForeColor = System.Drawing.Color.Black
+        Me.Button3.Location = New System.Drawing.Point(506, 55)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(115, 32)
+        Me.Button3.TabIndex = 24
+        Me.Button3.Text = "Kommentar"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(331, 54)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(115, 32)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "OK"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(1472, 535)
+        Me.ClientSize = New System.Drawing.Size(1293, 535)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtKom)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtNr)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtFertig)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form3"
@@ -124,9 +159,12 @@ Partial Class Form3
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents txtFertig As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNr As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents txtKom As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button1 As Button
 End Class

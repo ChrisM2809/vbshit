@@ -14,7 +14,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\IFB_DB.accdb"
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\IFB_DB.accdb"
         con.Open()
         command.Connection = con
     End Sub
@@ -23,21 +23,21 @@ Public Class Form1
         mycheck = True
         adapter1 = New OleDbDataAdapter("SELECT * FROM Benutzer;", con)
         adapter2 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte;", con)
-        adapter3 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte WHERE GeplanterFertiger = '" + txtUsername.Text + "';", con)
+        adapter3 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte WHERE Fertiger = '" + txtUsername.Text + "';", con)
         adapter1.Fill(myDataSet1)
         adapter2.Fill(myDataSet2)
         adapter3.Fill(myDataSet3)
-        Form2.DataGridView1.DataSource = myDataSet1.Tables(0)
-        For i As Integer = 0 To Form2.DataGridView1.Rows.Count - 1
+        Form2.DataGridView2.DataSource = myDataSet1.Tables(0)
+        For i As Integer = 0 To Form2.DataGridView2.Rows.Count - 1
             Try
                 If myDataSet1.Tables(0).Rows(i).ItemArray(0) = txtUsername.Text And myDataSet1.Tables(0).Rows(i).ItemArray(1) = txtPassword.Text Then
                     mystop = True
                     If myDataSet1.Tables(0).Rows(i).ItemArray(2) = mycheck Then         'Admin
-                        Form2.DataGridView1.DataSource = myDataSet2.Tables(0)
+                        Form2.DataGridView2.DataSource = myDataSet2.Tables(0)
                         Form2.Show()
                     End If
                     If myDataSet1.Tables(0).Rows(i).ItemArray(3) = mycheck Then         'Admin
-                        Form2.DataGridView1.DataSource = myDataSet2.Tables(0)
+                        Form2.DataGridView2.DataSource = myDataSet2.Tables(0)
                         Form2.Show()
                     End If
                     If myDataSet1.Tables(0).Rows(i).ItemArray(4) = mycheck Then         'User
