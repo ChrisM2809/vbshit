@@ -1,0 +1,16 @@
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\bin\Debug\Projektarbeit-2021.exe.config
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\bin\Debug\Projektarbeit-2021.exe
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\bin\Debug\Projektarbeit-2021.pdb
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\bin\Debug\Projektarbeit-2021.xml
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.vbproj.AssemblyReference.cache
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit_2021.Form1.resources
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit_2021.Form2.resources
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit_2021.Form3.resources
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit_2021.Resources.resources
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.vbproj.GenerateResource.cache
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.vbproj.CoreCompileInputs.cache
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.exe
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.xml
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit-2021.pdb
+C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\Projektarbeit-2021\obj\Debug\Projektarbeit_2021.Form4.resources

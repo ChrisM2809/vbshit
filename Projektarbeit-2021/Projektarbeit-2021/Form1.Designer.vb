@@ -49,7 +49,7 @@ Partial Class Form1
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(182, 32)
         Me.txtUsername.TabIndex = 1
-        Me.txtUsername.Text = "Herrmann Reil"
+        Me.txtUsername.Text = "Adam"
         '
         'txtPassword
         '
@@ -59,7 +59,7 @@ Partial Class Form1
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(182, 32)
         Me.txtPassword.TabIndex = 2
-        Me.txtPassword.Text = "reil"
+        Me.txtPassword.Text = "stoleski"
         '
         'Label1
         '

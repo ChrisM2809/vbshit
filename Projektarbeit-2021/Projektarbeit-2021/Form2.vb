@@ -6,74 +6,40 @@ Public Class Form2
     Dim adapter2 As OleDbDataAdapter
     Dim adapter3 As OleDbDataAdapter
     Dim adapter4 As OleDbDataAdapter
-<<<<<<< HEAD
     Dim adapter5 As OleDbDataAdapter
     Dim adapter6 As OleDbDataAdapter
-=======
->>>>>>> 7b8b8092217f2fe2bb9c29901c60d38483373ada
     Dim myDataSet1 As New DataSet
     Dim myDataSet2 As New DataSet
     Dim myDataSet3 As New DataSet
     Dim myDataSet4 As New DataSet
-<<<<<<< HEAD
     Dim myDataSet5 As New DataSet
     Dim myDataSet6 As New DataSet
     Dim command As New OleDbCommand
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Form1.Hide()
-        Panel1.Hide()
+
         con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Info2.R1PC05\source\repos\Projektarbeit-2021\IFB_DB.accdb"
         con.Open()
         command.Connection = con
 
-=======
-    Dim command As New OleDbCommand
-    Dim myStop As New Boolean
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Form1.Hide()
-        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\phili\Desktop\vbshit-main\vbshit-main\Projektarbeit-2021\IFB_DB.accdb"
-        con.Open()
-        command.Connection = con
-        myStop = False
->>>>>>> 7b8b8092217f2fe2bb9c29901c60d38483373ada
         adapter1 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer;", con)
         adapter1.Fill(myDataSet1)
         Me.DataGridView1.DataSource = myDataSet1.Tables(0)
-        adapter2 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte;", con)
+        adapter2 = New OleDbDataAdapter("SELECT Auftragsnummer, Fertiger, Artikelnr, Bezeichnung, Menge, BereitsGefertigt, Bereitgestellt, Starttermin, Endtermin FROM Arbeitsvorräte;", con)
         adapter2.Fill(myDataSet2)
-
+        Me.DataGridView2.DataSource = myDataSet2.Tables(0)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-<<<<<<< HEAD
-        myDataSet1.Tables.Clear()
-        adapter1 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer;", con)
-        adapter1.Fill(myDataSet1)
-        Me.DataGridView1.DataSource = myDataSet1.Tables(0)
-        myDataSet2.Tables.Clear()
-        adapter2 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte;", con)
-        adapter2.Fill(myDataSet2)
-        Me.DataGridView2.DataSource = myDataSet2.Tables(0)
 
-=======
-        adapter1 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer;", con)
-        adapter1.Fill(myDataSet1)
-        adapter2 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte;", con)
-        adapter2.Fill(myDataSet2)
-        Me.DataGridView1.DataSource = myDataSet1.Tables(0)
-        Me.DataGridView2.DataSource = myDataSet2.Tables(0)
->>>>>>> 7b8b8092217f2fe2bb9c29901c60d38483373ada
+
         If txtUsername.Text = String.Empty Or txtNr.Text = String.Empty Or txtStart.Text = String.Empty Or txtEnd.Text = String.Empty Then
             MsgBox("Bitte geben sie Daten an")
         End If
         Try
 
-            myDataSet2.Tables.Clear()
-<<<<<<< HEAD
+            Me.myDataSet2.Tables.Clear()
             command.CommandText = "UPDATE Arbeitsvorräte SET Fertiger = '" + txtUsername.Text + "' WHERE Auftragsnummer = " + txtNr.Text + ";"
-=======
-            command.CommandText = "UPDATE Arbeitsvorräte SET GeplanterFertiger = '" + txtUsername.Text + "' WHERE Auftragsnummer = " + txtNr.Text + ";"
->>>>>>> 7b8b8092217f2fe2bb9c29901c60d38483373ada
             command.ExecuteNonQuery()
 
             command.CommandText = "UPDATE Arbeitsvorräte SET Starttermin = '" + txtStart.Text + "' WHERE Auftragsnummer = " + txtNr.Text + ";"
@@ -83,6 +49,14 @@ Public Class Form2
             command.ExecuteNonQuery()
 
 
+            adapter1 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer;", con)
+            adapter1.Fill(myDataSet1)
+            Me.DataGridView1.DataSource = myDataSet1.Tables(0)
+
+            adapter2 = New OleDbDataAdapter("SELECT Auftragsnummer, Fertiger, Artikelnr, Bezeichnung, Menge, BereitsGefertigt, Bereitgestellt, Starttermin, Endtermin FROM Arbeitsvorräte;", con)
+            adapter2.Fill(myDataSet2)
+            Me.DataGridView2.DataSource = myDataSet2.Tables(0)
+            MsgBox("Daten wurden gelesen")
         Catch ex As Exception
 
         End Try
@@ -91,21 +65,12 @@ Public Class Form2
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
-        Form1.Show()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        adapter3 = New OleDbDataAdapter("SELECT * FROM Arbeitsvorräte WHERE GeplanterFertiger = '" + txtSuchen.Text + "';", con)
-        adapter3.Fill(myDataSet3)
-        Me.DataGridView1.DataSource = myDataSet3.Tables(0)
-        adapter4 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer WHERE Benutzername = '" + txtSuchen.Text + "';", con)
-        adapter4.Fill(myDataSet4)
-        Me.DataGridView2.DataSource = myDataSet4.Tables(0)
+        Form1.Close()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        myDataSet3.Tables.Clear()
+        Me.myDataSet3.Tables.Clear()
         adapter3 = New OleDbDataAdapter("SELECT Benutzername FROM Benutzer WHERE Benutzername = '" + txtSuchen.Text + "';", con)
         adapter3.Fill(myDataSet3)
         Me.DataGridView1.DataSource = myDataSet3.Tables(0)
@@ -115,21 +80,9 @@ Public Class Form2
         adapter4.Fill(myDataSet4)
         Me.DataGridView2.DataSource = myDataSet4.Tables(0)
 
-        myDataSet5.Tables.Clear()
-        adapter6 = New OleDbDataAdapter("SELECT Auftragsnummer, Fertiger, Kommentar FROM Arbeitsvorräte WHERE Fertiger = '" + txtSuchen.Text + "';", con)
-        adapter6.Fill(myDataSet6)
-        Me.DataGridView3.DataSource = myDataSet6.Tables(0)
-
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        adapter5 = New OleDbDataAdapter("SELECT Auftragsnummer, Fertiger, Kommentar FROM Arbeitsvorräte;", con)
-        adapter5.Fill(myDataSet5)
-        Me.DataGridView3.DataSource = myDataSet5.Tables(0)
-        Panel1.Show()
-    End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Panel1.Hide()
-    End Sub
+
+
 End Class
